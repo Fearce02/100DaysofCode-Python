@@ -7,7 +7,7 @@ This repo is dedicated to tracking my progress as I learn **Python** over the ne
 
 ## 📅 Challenge Overview
 
-**Start Date:** [Add your start date here]  
+**Start Date:** 12th June 2025
 **Goal:** Dedicate at least 1 hour every day to learning and coding in Python.  
 **Duration:** 100 Days  
 **Purpose:** Build consistent habits, solidify programming fundamentals, and create a portfolio of Python projects.
