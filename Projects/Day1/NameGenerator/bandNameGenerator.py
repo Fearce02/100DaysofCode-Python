@@ -7,3 +7,4 @@ print(pet)
 
 bandName = (city + " " + pet)
 print(bandName)
+

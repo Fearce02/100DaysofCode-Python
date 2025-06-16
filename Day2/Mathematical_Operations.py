@@ -22,3 +22,11 @@ new_bmi = weight_number // ( heightM * heightM)
 bmi_string = str(new_bmi)
 
 print("Your BMI is " + bmi_string)
+
+#f strings are similar to template literals in Javascript. It can be used to insert a variable or an expression into a string
+
+#F string example
+score = 0
+boolean = True
+height = 0.3
+print(f"Your score is : {score}, Your height is {height}, This info is {boolean}")
