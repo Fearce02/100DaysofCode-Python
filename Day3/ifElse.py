@@ -7,3 +7,6 @@ if height > 130:
     #Everything after the indentation ":" is a block of code.
 else:
     print("Sorry you cannot ride the rollercoaster")    
+
+
+#Comparison Operator = ">, <, ==, !=, >=, <="
