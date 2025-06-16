@@ -9,4 +9,4 @@ else:
     print("Sorry you cannot ride the rollercoaster")    
 
 
-#Comparison Operator = ">, <, ==, !=, >=, <="
+#Comparison Operators = ">, <, ==, !=, >=, <="
