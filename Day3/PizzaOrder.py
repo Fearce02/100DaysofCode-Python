@@ -15,8 +15,12 @@ elif size == "L" :
     bill +=25
     print("Large size selected")
 
-if pepperoni == "Y" :
-    bill +=2
+if pepperoni == "Y":
+    if size == "S":
+        bill +=2
+    else :
+        bill += 3
+
     print("Pepperoni Added!")
 
 if extra_cheese == "Y" :
