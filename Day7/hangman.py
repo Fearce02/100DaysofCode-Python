@@ -8,7 +8,7 @@ print(hangman_art.logo)
 
 
 random_word = random.choice(word_list)
-print(random_word)
+
 
 placeholder = ""
 word_length = len(random_word)
