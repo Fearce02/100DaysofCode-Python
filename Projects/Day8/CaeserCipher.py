@@ -18,14 +18,6 @@ a8"     "" 88 88P'    "8a 88P'    "8a a8P_____88 88P'   "Y8
 
 print(logo)
 
-alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
-
-direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n").lower()
-text = input("Type your message:\n").lower()
-shift = int(input("Enter your shift amount:\n"))
-
-
-
 # def encrypt(original_text, shift_amount):
 #         cipher_text = ""
 #         for letter in original_text:
@@ -75,6 +67,21 @@ def caesar(original_text, shift_amount, directionality):
         print(f"This is the decoded result: {decrypt_word}")
     
 
-caesar(original_text=text, shift_amount=shift, directionality=direction)
+alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
+should_continue = True
+
+while should_continue:
+    
+    direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n").lower()
+    text = input("Type your message:\n").lower()
+    shift = int(input("Enter your shift amount:\n"))
+
+    caesar(original_text=text, shift_amount=shift, directionality=direction)
+
+    res_prompt = input("Do you want to go again? Type 'yes' to continue or 'no' to stop: ").lower()
+
+    if res_prompt == 'no':
+        should_continue =  False
+        print("GoodBye!")
 
