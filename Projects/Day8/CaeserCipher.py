@@ -21,42 +21,60 @@ print(logo)
 alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
 direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n").lower()
-# text = input("Type your message:\n").lower()
+text = input("Type your message:\n").lower()
+shift = int(input("Enter your shift amount:\n"))
 
 
 
+# def encrypt(original_text, shift_amount):
+#         cipher_text = ""
+#         for letter in original_text:
+#             encrypted_word = alphabet.index(letter) + shift_amount
+
+#             encrypted_word %= len(alphabet) #fix for the out of index error
+#             cipher_text += alphabet[encrypted_word]
+#         print(f"Here is the encoded result: {cipher_text}")
 
 
 
-def encrypt(original_text, shift_amount):
-        cipher_text = ""
-        for letter in original_text:
-            encrypted_word = alphabet.index(letter) + shift_amount
+# def decrypt(encryptcode, shiftamount):
+#     decrypt_word = ""
+#     for letter in encryptcode:
+#         decrypted_code = alphabet.index(letter) - shiftamount
 
-            encrypted_word %= len(alphabet) #fix for the out of index error
-            cipher_text += alphabet[encrypted_word]
-        print(f"Here is the encoded result: {cipher_text}")
+#         decrypted_code %= len(alphabet)
+#         decrypt_word += alphabet[decrypted_code]
+#     print(f"This is the decoded result: {decrypt_word}") 
 
 
+# if direction == 'encode':
+#     text = input("Type your message:\n").lower()
+#     shift = int(input("Type the shift number:\n"))
+#     encrypt(original_text=text, shift_amount=shift)
+# elif direction == 'decode':
+#     decode_text = input("Type your message to decode: de").lower()
+#     shift = int(input("Type the shift number:\n"))
+#     decrypt(encryptcode=decode_text, shiftamount=shift)
 
-def decrypt(encryptcode, shiftamount):
+
+def caesar(original_text, shift_amount, directionality):
     decrypt_word = ""
-    for letter in encryptcode:
-        decrypted_code = alphabet.index(letter) - shiftamount
+    for letter in original_text:
+
+        if directionality == 'decode':
+            decrypted_code = alphabet.index(letter) - shift_amount
+        elif directionality == 'encode':
+            decrypted_code = alphabet.index(letter) + shift_amount
 
         decrypted_code %= len(alphabet)
         decrypt_word += alphabet[decrypted_code]
-    print(f"This is the decoded result: {decrypt_word}") 
 
+    if directionality == 'encode':
+        print(f"This is the encoded result: {decrypt_word}")
+    elif directionality == 'decode':
+        print(f"This is the decoded result: {decrypt_word}")
+    
 
-if direction == 'encode':
-    text = input("Type your message:\n").lower()
-    shift = int(input("Type the shift number:\n"))
-    encrypt(original_text=text, shift_amount=shift)
-elif direction == 'decode':
-    decode_text = input("Type your message to decode: ").lower()
-    shift = int(input("Type the shift number:\n"))
-    decrypt(encryptcode=decode_text, shiftamount=shift)
-
+caesar(original_text=text, shift_amount=shift, directionality=direction)
 
 
