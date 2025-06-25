@@ -17,7 +17,7 @@ def deal_card():
     return card
 
 def calculatescore(cards):
-    if sum(cards) and len(cards) == 2:
+    if sum(cards) == 21 and len(cards) == 2:
         return 0
     if 11 in cards and sum(cards) > 21:
         cards.remove(11)
@@ -50,9 +50,8 @@ def play_game():
     computer_score = -1
 
     for _ in range(2):
-        new_card = deal_card()
-        user_cards.append(new_card)
-        computer_cards.append(new_card)
+        user_cards.append(deal_card())
+        computer_cards.append(deal_card())
 
     while not is_game_over:
         user_score = calculatescore(user_cards)
