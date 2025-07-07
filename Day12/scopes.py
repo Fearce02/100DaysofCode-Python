@@ -31,3 +31,13 @@ new_enemy = create_enemy()  # This will call the function and assign the returne
 # Now we can print the new_enemy variable
 # This will print the new_enemy variable defined in the if block.   
 print(new_enemy)
+
+#how do you access global variables inside a function?
+def print_global_name():
+    global name  # This tells Python that we want to use the global variable 'name'
+    print(f"Global name is: {name}")
+
+#be careful with modifying global variables inside a function
+
+#Python Constants
+pi = 3.14 # This is a constant in Python, but it can still be changed. there is no keyword like const similar to javascript or c++
