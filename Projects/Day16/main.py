@@ -23,10 +23,9 @@ while is_on:
     else:
         drink = menu.find_drink(choice)
         resources = coffee_maker.is_resource_sufficient(drink)
-        if resources == True:
-            money_machine.make_payment(drink.cost)
+        if resources == True and money_machine.make_payment(drink.cost):
             coffee_maker.make_coffee(drink)
             
-        else:
+        elif resources == False:
             print("Insufficient Resources please come again later")
         
