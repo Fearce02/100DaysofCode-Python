@@ -33,3 +33,11 @@ print(my_screen.canvheight) #This will print the height of the screen.
 #Object Methods.
 my_screen.exitonclick() #This will close the screen when clicked.
 
+#PyPi is Python Package Index. Which lets you install python packages similar to npm packagaes.
+
+# from prettytable import PrettyTable
+
+# table = PrettyTable() #Pascal Case which is NewWord second word starts with capital
+# table.add_column("Pokemon Name", ["Pikachu", "Squirtle", "Charmander", "Bulbasaur"])
+# table.add_column("Type", ["Electric", "Water", "Fire", "Grass"])
+# print(table)
